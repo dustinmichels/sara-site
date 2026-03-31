@@ -1,0 +1,11 @@
+/*
+ * By Riciery Santos Leal
+ */
+@font-face {
+  font-display: block;
+  font-family: "VCR OSD Mono";
+  src: url("../fonts/VCROSD-Mono.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
