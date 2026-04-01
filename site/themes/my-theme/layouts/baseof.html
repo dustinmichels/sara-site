@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" data-predefined-style="true" class="wf-vcrosdmono-n4-active wf-active" style="font-size: 54%;">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body data-bodyview="">
+  <div class="main_container">
+    {{ partial "header.html" . }}
+
+    <main class="content_container">
+      <div data-view="Content" data-set="Scaffolding">
+        <div data-container="set" data-id="0">
+          <div data-container="page" class="page_container" local-style="34665675" data-id="34665675" data-padding-top="true" style="padding-top: 33.7031px;">
+            <div class="page container container_width" data-container="content" data-id="34665675">
+              <bodycopy class="bodycopy content content_padding">
+                <div class="page_content clearfix" data-elementresizer="" data-resize-parent="" data-ce-host="true" data-ce-model-id="34665675">
+                  {{ block "main" . }}{{ end }}
+                </div>
+              </bodycopy>
+            </div>
+            <div class="page_background"></div>
+            <style class="local-css" data-target="34665675">
+              [local-style="34665675"] .backdrop { width: 100% /*!background_cover*/; }
+              [local-style="34665675"] .page { min-height: auto /*!page_height_default*/; }
+              [local-style="34665675"] .content_padding {
+                padding-top: 5.4rem /*!main_margin*/;
+                padding-bottom: 5.4rem /*!main_margin*/;
+                padding-left: 5.4rem /*!main_margin*/;
+                padding-right: 5.4rem /*!main_margin*/;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      {{ partial "footer.html" . }}
+    </footer>
+  </div>
+</body>
+</html>

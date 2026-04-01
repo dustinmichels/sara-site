@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Sara Swaminathan'
+theme = "my-theme"
+
+[markup.goldmark.renderer]
+unsafe = true
