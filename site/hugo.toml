@@ -5,3 +5,19 @@ theme = "my-theme"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[menus]
+[[menus.main]]
+name = 'About Me'
+pageRef = '/info'
+weight = 10
+
+[[menus.main]]
+name = 'CV'
+pageRef = '/cv'
+weight = 20
+
+[[menus.main]]
+name = 'Art & Communication'
+pageRef = '/science-illustrations'
+weight = 30

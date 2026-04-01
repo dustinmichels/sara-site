@@ -4,6 +4,4 @@
 
 <link href="/css/cargo-core.css" rel="stylesheet" type="text/css">
 <link href="/css/stylesheet.css" rel="stylesheet" type="text/css">
-
-{{ $mainCss := resources.Get "css/main.css" }}
-{{ if $mainCss }}<link href="{{ $mainCss.RelPermalink }}" rel="stylesheet" type="text/css">{{ end }}
+{{ partial "head/css.html" . }}

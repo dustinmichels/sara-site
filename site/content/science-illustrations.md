@@ -2,25 +2,18 @@
 title: "ART & COMMUNICATION"
 ---
 
-<br>
-<div grid-row="" grid-pad="0" grid-gutter="0">
-	<div grid-col="x12" grid-pad="0" class=""><br>
+## Scientific Illustrations
 
-<br>
-<h2>SCIENTIFIC ILLUSTRATIONS<br>
-</h2></div>
-</div><br>
-
-<div class="image-gallery">
-  <img src="/fonts/atlantic-blue-tang-VECTOR.svg" alt="" />
-  <img src="/fonts/macroalgaeVECTOR.svg" alt="" />
-  <img src="/fonts/gorgonianVECTOR.svg" alt="" />
-  <img src="/fonts/sponge-VECTOR.svg" alt="" />
-  <img src="/fonts/thallasoma-VECTOR.svg" alt="" />
-  <img src="/fonts/resistantCoral-VECTOR.svg" alt="" />
-  <img src="/fonts/susc-coral-VECTOR.svg" alt="" />
-  <img src="/fonts/cca-VECTOR.svg" alt="" />
-  <img src="/fonts/foureyebutterflyfish-VECTOR.SVG" alt="" />
-  <img src="/fonts/turfAlgaeVECTOR.svg" alt="" />
-  <img src="/fonts/zoanthidVECTOR.svg" alt="" />
-</div>
+{{< gallery >}}
+<img src="/fonts/atlantic-blue-tang-VECTOR.svg" alt="Atlantic Blue Tang">
+<img src="/fonts/macroalgaeVECTOR.svg" alt="Macroalgae">
+<img src="/fonts/gorgonianVECTOR.svg" alt="Gorgonian">
+<img src="/fonts/sponge-VECTOR.svg" alt="Sponge">
+<img src="/fonts/thallasoma-VECTOR.svg" alt="Thallasoma">
+<img src="/fonts/resistantCoral-VECTOR.svg" alt="Resistant Coral">
+<img src="/fonts/susc-coral-VECTOR.svg" alt="Susceptible Coral">
+<img src="/fonts/cca-VECTOR.svg" alt="Crustose Coralline Algae">
+<img src="/fonts/foureyebutterflyfish-VECTOR.SVG" alt="Foureye Butterflyfish">
+<img src="/fonts/turfAlgaeVECTOR.svg" alt="Turf Algae">
+<img src="/fonts/zoanthidVECTOR.svg" alt="Zoanthid">
+{{< /gallery >}}

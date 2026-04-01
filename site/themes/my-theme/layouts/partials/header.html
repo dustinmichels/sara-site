@@ -3,38 +3,25 @@
 		<div class="page container container_width clearfix" data-container="content" data-id="34665673">
 			<bodycopy class="bodycopy content content_padding">
 				<div class="page_content clearfix" data-elementresizer="" data-resize-parent="" data-ce-host="true" data-ce-model-id="34665673">
-					<h1><a href="/" rel="history">Sara Swaminathan,</a> PhD<br></h1>
+					<h1><a href="/" rel="history">Sara Swaminathan,</a> PhD</h1>
 				</div>
 			</bodycopy>
 		</div>
 		<div class="page_background"></div>
-		<style class="local-css" data-target="34665673">
-			[local-style="34665673"] body { background-color: initial /*!variable_defaults*/; }
-			[local-style="34665673"] .page { min-height: auto /*!page_height_default*/; }
-			[local-style="34665673"] .page_background { background-color: initial /*!page_container_bgcolor*/; }
-			[local-style="34665673"] .content_padding { padding: 0rem /*!main_margin*/; }
-			[local-style="34665673"] .container { margin-left: 0 /*!content_left*/; }
-		</style>
 	</div>
-	
+
 	<div class="page_container overlay fixed pointer-events-none" local-style="34665674" style="top: 0px; z-index: 4;">
 		<div class="page container container_width clearfix" data-container="content" data-id="34665674">
 			<bodycopy class="bodycopy content content_padding">
 				<div class="page_content clearfix" data-elementresizer="" data-resize-parent="" data-ce-host="true" data-ce-model-id="34665674">
-					<h1><a href="/info/" rel="history" {{ if eq .RelPermalink "/info/" }}class="active"{{ end }}>ABOUT ME</a><br>
-					<a href="/cv/" rel="history" {{ if eq .RelPermalink "/cv/" }}class="active"{{ end }}>CV</a><br>
-					<a href="/science-illustrations/" rel="history" {{ if eq .RelPermalink "/science-illustrations/" }}class="active"{{ end }}>ART &amp; COMMUNICATION</a></h1>
+					<h1>
+						{{- range site.Menus.main }}
+						<a href="{{ .URL }}" rel="history"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a><br>
+						{{- end }}
+					</h1>
 				</div>
 			</bodycopy>
 		</div>
 		<div class="page_background"></div>
-		<style class="local-css" data-target="34665674">
-			[local-style="34665674"] .page { min-height: 100vh /*!page_height_100vh*/; }
-			[local-style="34665674"] .page_background { background-color: initial /*!page_container_bgcolor*/; }
-			[local-style="34665674"] .content_padding { padding: 1.5rem /*!main_margin*/; }
-			[local-style="34665674"] h1 { font-size: 2.5rem; }
-			[local-style="34665674"] h2 { font-size: 2.8rem; }
-			[local-style="34665674"] .container { text-align: right /*!text_right*/; }
-		</style>
 	</div>
 </div>

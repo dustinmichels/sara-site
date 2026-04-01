@@ -4,43 +4,84 @@ document.addEventListener('DOMContentLoaded', () => {
   // Create modal elements
   const overlay = document.createElement('div');
   overlay.className = 'modal-overlay';
-  
+
   const closeBtn = document.createElement('span');
   closeBtn.className = 'modal-close';
   closeBtn.innerHTML = '&times;';
-  
+
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'modal-prev';
+  prevBtn.innerHTML = '&lt;';
+  prevBtn.setAttribute('aria-label', 'Previous image');
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'modal-next';
+  nextBtn.innerHTML = '&gt;';
+  nextBtn.setAttribute('aria-label', 'Next image');
+
   const modalImg = document.createElement('img');
   modalImg.className = 'modal-content';
-  
+
   overlay.appendChild(closeBtn);
+  overlay.appendChild(prevBtn);
   overlay.appendChild(modalImg);
+  overlay.appendChild(nextBtn);
   document.body.appendChild(overlay);
 
-  // Close modal function
-  const closeModal = () => {
-    overlay.classList.remove('active');
+  // Track gallery images and current index
+  let galleryImgs = [];
+  let currentIndex = 0;
+
+  const showImage = (index) => {
+    currentIndex = (index + galleryImgs.length) % galleryImgs.length;
+    modalImg.src = galleryImgs[currentIndex].src;
+    prevBtn.style.visibility = galleryImgs.length > 1 ? 'visible' : 'hidden';
+    nextBtn.style.visibility = galleryImgs.length > 1 ? 'visible' : 'hidden';
   };
 
-  // Event listeners for closing
+  const closeModal = () => overlay.classList.remove('active');
+
+  const openModal = (imgs, index) => {
+    galleryImgs = imgs;
+    showImage(index);
+    overlay.classList.add('active');
+  };
+
+  // Close on X or backdrop click (not on image or arrows)
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => {
-    if (e.target !== modalImg) {
-      closeModal();
-    }
+    if (e.target === overlay) closeModal();
+  });
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex + 1);
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('active')) {
-      closeModal();
-    }
+    if (!overlay.classList.contains('active')) return;
+    if (e.key === 'Escape')     closeModal();
+    if (e.key === 'ArrowLeft')  showImage(currentIndex - 1);
+    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
   });
 
-  // Attach click events to all images
-  document.querySelectorAll('img:not(.modal-content)').forEach(img => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', () => {
-      modalImg.src = img.src;
-      overlay.classList.add('active');
+  // Attach click events — group images by their gallery container
+  document.querySelectorAll('.image-gallery').forEach(gallery => {
+    const imgs = Array.from(gallery.querySelectorAll('img'));
+    imgs.forEach((img, i) => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => openModal(imgs, i));
     });
+  });
+
+  // Images outside a gallery open solo (no arrows)
+  document.querySelectorAll('img:not(.modal-content):not(.image-gallery img)').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => openModal([img], 0));
   });
 });

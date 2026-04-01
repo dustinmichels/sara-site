@@ -709,7 +709,7 @@ div.image-gallery:not(.initialized) {
     min-height: auto !important;
 }
 
-div.image-gallery > img {
+div.image-gallery img {
     display: inline-block !important;
     width: 31% !important; /* simple 3 column grid with gaps */
     margin: 1% !important;
@@ -718,12 +718,12 @@ div.image-gallery > img {
 
 /* Make gallery responsive */
 @media (max-width: 800px) {
-    div.image-gallery > img {
+    div.image-gallery img {
         width: 48% !important;
     }
 }
 @media (max-width: 500px) {
-    div.image-gallery > img {
+    div.image-gallery img {
         width: 100% !important;
         margin: 1% 0 !important;
     }
