@@ -97,7 +97,7 @@ p, .bodycopy {
 .modal-next { right: 0; }
 
 /* Home Page Full Screen Image */
-body.is-home [local-style="main-content"] .content_padding {
+body.is-home .section-main-content .content_padding {
   padding-bottom: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -152,24 +152,24 @@ body.page-cv .page_content {
 }
 
 /* Header - name/title pinned section */
-[local-style="header-name"] body { background-color: initial /*!variable_defaults*/; }
-[local-style="header-name"] .page { min-height: auto /*!page_height_default*/; }
-[local-style="header-name"] .page_background { background-color: initial /*!page_container_bgcolor*/; }
-[local-style="header-name"] .content_padding { padding: 0rem /*!main_margin*/; }
-[local-style="header-name"] .container { margin-left: 0 /*!content_left*/; }
+.section-header-name body { background-color: initial /*!variable_defaults*/; }
+.section-header-name .page { min-height: auto /*!page_height_default*/; }
+.section-header-name .page_background { background-color: initial /*!page_container_bgcolor*/; }
+.section-header-name .content_padding { padding: 0rem /*!main_margin*/; }
+.section-header-name .container { margin-left: 0 /*!content_left*/; }
 
 /* Header - nav links pinned section */
-[local-style="header-nav"] .page { min-height: 100vh /*!page_height_100vh*/; }
-[local-style="header-nav"] .page_background { background-color: initial /*!page_container_bgcolor*/; }
-[local-style="header-nav"] .content_padding { padding: 1.5rem /*!main_margin*/; }
-[local-style="header-nav"] h1 { font-size: 2.5rem; }
-[local-style="header-nav"] h2 { font-size: 2.8rem; }
-[local-style="header-nav"] .container { text-align: right /*!text_right*/; }
+.section-header-nav .page { min-height: 100vh /*!page_height_100vh*/; }
+.section-header-nav .page_background { background-color: initial /*!page_container_bgcolor*/; }
+.section-header-nav .content_padding { padding: 1.5rem /*!main_margin*/; }
+.section-header-nav h1 { font-size: 2.5rem; }
+.section-header-nav h2 { font-size: 2.8rem; }
+.section-header-nav .container { text-align: right /*!text_right*/; }
 
 /* Main content page section */
-[local-style="main-content"] .backdrop { width: 100% /*!background_cover*/; }
-[local-style="main-content"] .page { min-height: auto /*!page_height_default*/; }
-[local-style="main-content"] .content_padding {
+.section-main-content .backdrop { width: 100% /*!background_cover*/; }
+.section-main-content .page { min-height: auto /*!page_height_default*/; }
+.section-main-content .content_padding {
   padding-top: 5.4rem /*!main_margin*/;
   padding-bottom: 5.4rem /*!main_margin*/;
   padding-left: 5.4rem /*!main_margin*/;
