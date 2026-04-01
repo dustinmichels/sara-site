@@ -10,3 +10,13 @@ Static site for Sara built with [Hugo](https://gohugo.io/).
 ## Usage
 
 Development
+
+```sh
+hugo server -D
+```
+
+Production
+
+```sh
+hugo
+```
