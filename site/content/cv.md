@@ -2,11 +2,25 @@
 title: "CV"
 ---
 
-email: <sswaminathan@bigelow.org>  
-twitter: @SaraSwaminathan  
+email: <button id="email-btn" onclick="revealEmail()" class="reveal-btn">[show]</button><span id="email-display"></span>  
+cell: <button id="phone-btn" onclick="revealNumber()" class="reveal-btn">[show]</button><span id="phone-display"></span>
+
+twitter: [@SaraSwaminathan](https://twitter.com/SaraSwaminathan)  
 github: [saraswaminathan](https://github.com/saraswaminathan)  
-website: <www.saraswaminathan.com>  
-cell: +1 352 514 0538
+website: [www.saraswaminathan.com](http://www.saraswaminathan.com)  
+
+<script>
+function revealNumber() {
+  document.getElementById('phone-display').innerText = atob("KzEgMzUyIDUxNCAwNTM4");
+  document.getElementById('phone-btn').style.display = 'none';
+}
+function revealEmail() {
+  const email = atob("c3N3YW1pbmF0aGFuQGJpZ2Vsb3cub3Jn");
+  const el = document.getElementById('email-display');
+  el.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+  document.getElementById('email-btn').style.display = 'none';
+}
+</script>
 
 {{< marquee >}}EDUCATION{{< /marquee >}}
 
