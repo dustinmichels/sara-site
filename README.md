@@ -1,6 +1,6 @@
 # Sara Site
 
-Static site built with [Hugo](https://gohugo.io/).
+Static site for Sara built with [Hugo](https://gohugo.io/).
 
 ## Editing
 
