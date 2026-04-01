@@ -3,8 +3,7 @@ title: "CV"
 ---
 
 email: <button id="email-btn" onclick="revealEmail()" class="reveal-btn">[show]</button><span id="email-display"></span>  
-cell: <button id="phone-btn" onclick="revealNumber()" class="reveal-btn">[show]</button><span id="phone-display"></span>
-
+cell: <button id="phone-btn" onclick="revealNumber()" class="reveal-btn">[show]</button><span id="phone-display"></span><br>
 twitter: [@SaraSwaminathan](https://twitter.com/SaraSwaminathan)  
 github: [saraswaminathan](https://github.com/saraswaminathan)  
 website: [www.saraswaminathan.com](http://www.saraswaminathan.com)  

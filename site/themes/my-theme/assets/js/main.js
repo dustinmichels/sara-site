@@ -77,6 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
       img.style.cursor = 'pointer';
       img.addEventListener('click', () => openModal(imgs, i));
     });
+
+    // Initialize Macy.js masonry for this gallery
+    Macy({
+      container: gallery,
+      trueOrder: true,
+      waitForImages: true,
+      margin: 8,
+      columns: 3,
+      breakAt: {
+        800: 2,
+        500: 1,
+      },
+    });
   });
 
   // Images outside a gallery open solo (no arrows)

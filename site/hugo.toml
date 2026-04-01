@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'Sara Swaminathan'
+title = 'Sara Swaminathan, PhD'
 theme = "my-theme"
 
 [markup.goldmark.renderer]
