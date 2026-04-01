@@ -152,12 +152,26 @@ small a {
 }
 
 .section-header-name {
-  padding: 0;
+  padding: 1.5rem;
+  background: transparent;
+  transition: background 0.4s ease;
+  border-radius: 4px;
+}
+
+.site-header.scrolled .section-header-name {
+  background: rgba(226, 228, 225, 0.82);
 }
 
 .section-header-nav {
   padding: 1.5rem;
   text-align: right;
+  background: transparent;
+  transition: background 0.4s ease;
+  border-radius: 4px;
+}
+
+.site-header.scrolled .section-header-nav {
+  background: rgba(226, 228, 225, 0.82);
 }
 
 .section-header-nav h1 {
