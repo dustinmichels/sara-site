@@ -68,12 +68,12 @@ Advisors: Art Gleason, Brooke Gintert
 
 {{< marquee >}}FUNDING, HONORS & AWARDS{{< /marquee >}}
 
-2022 Tropical Conservation and Development Travel Award, University of Florida Center for Latin American Studies ($500)  
-2020 Tropical Conservation and Development Field Research Award, University of Florida Center for Latin American Studies ($2500)  
-2020 Sally and William Glick Graduate Research Endowment, University of Florida Department of Environmental Engineering Sciences ($1500)  
-2019 National Science Foundation Graduate Research Fellowship Program (NSF GRFP) ($144,000)  
-2019 University of Florida Graduate Student Preeminence Award, University of Florida Graduate School ($36,000)  
-2018 Bahamas Marine EcoCentre Research Fellowship ($10,000)
+- 2022 Tropical Conservation and Development Travel Award, University of Florida Center for Latin American Studies ($500)  
+- 2020 Tropical Conservation and Development Field Research Award, University of Florida Center for Latin American Studies ($2500)  
+- 2020 Sally and William Glick Graduate Research Endowment, University of Florida Department of Environmental Engineering Sciences ($1500)  
+- 2019 National Science Foundation Graduate Research Fellowship Program (NSF GRFP) ($144,000)  
+- 2019 University of Florida Graduate Student Preeminence Award, University of Florida Graduate School ($36,000)  
+- 2018 Bahamas Marine EcoCentre Research Fellowship ($10,000)
 
 {{< marquee >}}OUTREACH & MENTORING{{< /marquee >}}
 
