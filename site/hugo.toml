@@ -2,6 +2,7 @@ baseURL = 'https://saraswaminathan.com/'
 languageCode = 'en-us'
 title = 'Sara Swaminathan, PhD'
 theme = "my-theme"
+canonifyURLs = true
 
 [params]
 macyJsCDN = "https://cdn.jsdelivr.net/npm/macy@2"
