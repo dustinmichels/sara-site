@@ -92,6 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Reveal contact info buttons
+  document.querySelectorAll('.reveal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const value = atob(btn.dataset.encoded);
+      const display = btn.nextElementSibling;
+      if (btn.dataset.type === 'email') {
+        display.innerHTML = '<a href="mailto:' + value + '">' + value + '</a>';
+      } else {
+        display.textContent = value;
+      }
+      btn.style.display = 'none';
+    });
+  });
+
   // Images outside a gallery open solo (no arrows)
   document.querySelectorAll('img:not(.modal-content):not(.image-gallery img)').forEach(img => {
     img.style.cursor = 'pointer';

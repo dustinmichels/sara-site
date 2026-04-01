@@ -1,7 +1,10 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://saraswaminathan.com/'
 languageCode = 'en-us'
 title = 'Sara Swaminathan, PhD'
 theme = "my-theme"
+
+[params]
+macyJsCDN = "https://cdn.jsdelivr.net/npm/macy@2"
 
 [markup.goldmark.renderer]
 unsafe = true
