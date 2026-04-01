@@ -203,6 +203,18 @@ body.page-cv .page_content {
 .section-header-nav h2 { font-size: 3.3rem; }
 .section-header-nav .container { text-align: right /*!text_right*/; }
 
+/* Mobile header layout */
+@media (max-width: 768px) {
+  .section-header-name .content_padding { padding: 0.75rem !important; }
+  .section-header-name h1 { font-size: 1.3rem; }
+
+  .section-header-nav .content_padding { padding: 0.75rem !important; }
+  .section-header-nav h1 { font-size: 1.3rem; }
+  .section-header-nav h1 br { display: none; }
+  .section-header-nav h1 a { margin-left: 0.75rem; }
+  .section-header-nav h1 a:first-child { margin-left: 0; }
+}
+
 /* Main content page section */
 .section-main-content .backdrop { width: 100% /*!background_cover*/; }
 .section-main-content .page { min-height: auto /*!page_height_default*/; }
