@@ -79,7 +79,7 @@ hr {
 .gallery_image_caption {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
 	font-weight: 500;
 	color: rgba(0, 0, 0, 0.4);
 	font-family: Diatype, Icons;
@@ -102,7 +102,7 @@ hr {
  */
 
 [data-predefined-style="true"] bodycopy {
-	font-size: 1.2rem;
+	font-size: 2.0rem;
 	font-weight: 500;
 	color: rgba(0, 0, 0, 0.75);
 	font-family: "Diatype Variable", Icons;
@@ -134,7 +134,7 @@ bodycopy a.icon-link:hover {
 	font-weight: 400;
 	padding: 0;
 	margin: 0;
-	font-size: 3.9rem;
+	font-size: 4.5rem;
 	line-height: 1;
 	color: rgba(0, 0, 0, 0.85);
     letter-spacing: -0.1rem;
@@ -151,7 +151,7 @@ bodycopy a.icon-link:hover {
 	padding: 0;
 	margin: 0;
 	color: rgba(0, 0, 0, 0.75);
-	font-size: 2.3rem;
+	font-size: 2.7rem;
 	line-height: 1.1;
 	font-variation-settings: 'slnt' 0, 'MONO' 0;
 	}
@@ -162,7 +162,7 @@ bodycopy a.icon-link:hover {
 
 [data-predefined-style="true"] small {
 	display: inline-block;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	line-height: 1.2;
 	font-family: "Monument Grotesk Mono Variable", Icons;
 	font-style: normal;
@@ -254,7 +254,7 @@ div[thumbnails] {
 .thumbnails .title {
     margin-top: 1.0rem;
     margin-bottom: 0.2rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 	font-weight: 500;
 	color: rgba(0, 0, 0, 0.85);
 	font-family: Diatype, Icons;
@@ -265,7 +265,7 @@ div[thumbnails] {
 .thumbnails .tags {
     margin-top: 0.8rem;
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 	font-weight: 400;
 	color: rgba(0, 0, 0, 0.4);
 	font-family: "Monument Grotesk Mono", Icons;
@@ -321,7 +321,7 @@ body.mobile #site_menu_button {
 #site_menu {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
 	background: rgba(20, 20, 20, 0.95);
-	font-size: 20px;
+	font-size: 23px;
 	font-style: normal;
 	font-weight: 400;
 	padding: 20px 30px 90px 30px;

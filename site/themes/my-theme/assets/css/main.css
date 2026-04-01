@@ -123,9 +123,31 @@ body.is-home .home-hero img {
   object-position: center;
 }
 
-/* Make font slightly larger on the CV page */
+/* Two-column layout for the info/about page */
+.info-columns {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.info-bio {
+  flex: 2;
+}
+
+.info-contact {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .info-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Make font slightly smaller on the CV page */
 body.page-cv .page_content {
-  font-size: 1.15em;
+  font-size: 0.85em;
 }
 
 /* Marquee section headers (CV page) */
@@ -162,8 +184,8 @@ body.page-cv .page_content {
 .section-header-nav .page { min-height: 100vh /*!page_height_100vh*/; }
 .section-header-nav .page_background { background-color: initial /*!page_container_bgcolor*/; }
 .section-header-nav .content_padding { padding: 1.5rem /*!main_margin*/; }
-.section-header-nav h1 { font-size: 2.5rem; }
-.section-header-nav h2 { font-size: 2.8rem; }
+.section-header-nav h1 { font-size: 3rem; }
+.section-header-nav h2 { font-size: 3.3rem; }
 .section-header-nav .container { text-align: right /*!text_right*/; }
 
 /* Main content page section */
