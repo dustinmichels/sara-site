@@ -10,12 +10,21 @@ title: "ABOUT ME"
   <div class="info-contact">
     <p><strong>CONTACT ME</strong></p>
     <p>
-      email: <a href="mailto:sswaminathan@bigelow.org">sswaminathan@bigelow.org</a><br>
+      email: <button id="email-btn" onclick="revealEmail()" class="reveal-btn">[show]</button><span id="email-display"></span><br>
       twitter: <a href="https://twitter.com/SaraSwaminathan">@SaraSwaminathan</a><br>
       github: <a href="https://github.com/saraswaminathan">saraswaminathan</a>
     </p>
   </div>
 </div>
+
+<script>
+function revealEmail() {
+  const email = atob("c3N3YW1pbmF0aGFuQGJpZ2Vsb3cub3Jn");
+  const el = document.getElementById('email-display');
+  el.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+  document.getElementById('email-btn').style.display = 'none';
+}
+</script>
 
 {{< gallery >}}
 <img src="/images/sara_boat.jpeg" alt="">

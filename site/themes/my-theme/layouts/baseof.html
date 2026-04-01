@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" data-predefined-style="true" class="wf-vcrosdmono-n4-active wf-active" style="font-size: 54%;">
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
   {{ partial "head.html" . }}
 </head>
-<body data-bodyview="" class="{{ if .IsHome }}is-home{{ else }}page-{{ .Title | urlize }}{{ end }}">
-  <div class="main_container">
+<body class="{{ if .IsHome }}is-home{{ else }}page-{{ .Title | urlize }}{{ end }}">
+  <div class="site-wrapper">
     {{ partial "header.html" . }}
-
-    <main class="content_container">
-      <div data-view="Content" data-set="Scaffolding">
-        <div data-container="set" data-id="0">
-          <div data-container="page" class="page_container section-main-content" data-id="34665675" data-padding-top="true" style="padding-top: 33.7031px;">
-            <div class="page container container_width" data-container="content" data-id="34665675">
-              <bodycopy class="bodycopy content content_padding">
-                <div class="page_content clearfix" data-elementresizer="" data-resize-parent="" data-ce-host="true" data-ce-model-id="34665675">
-                  {{ block "main" . }}{{ end }}
-                </div>
-              </bodycopy>
-            </div>
-            <div class="page_background"></div>
-          </div>
-        </div>
+    <main class="section-main-content">
+      <div class="page-content">
+        {{ block "main" . }}{{ end }}
       </div>
     </main>
   </div>

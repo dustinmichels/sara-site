@@ -1,27 +1,12 @@
-<div data-view="pinned_top" data-set="Scaffolding" data-position="top" class="pinned pinned_top" style="height: 0px;">
-	<div class="page_container overlay accommodate fixed pointer-events-none section-header-name" style="top: 0px; z-index: 5;">
-		<div class="page container container_width clearfix" data-container="content" data-id="34665673">
-			<bodycopy class="bodycopy content content_padding">
-				<div class="page_content clearfix" data-elementresizer="" data-resize-parent="" data-ce-host="true" data-ce-model-id="34665673">
-					<h1><a href="/" rel="history">{{ site.Title }}</a></h1>
-				</div>
-			</bodycopy>
-		</div>
-		<div class="page_background"></div>
-	</div>
-
-	<div class="page_container overlay fixed pointer-events-none section-header-nav" style="top: 0px; z-index: 4;">
-		<div class="page container container_width clearfix" data-container="content" data-id="34665674">
-			<bodycopy class="bodycopy content content_padding">
-				<div class="page_content clearfix" data-elementresizer="" data-resize-parent="" data-ce-host="true" data-ce-model-id="34665674">
-					<h1>
-						{{- range site.Menus.main }}
-						<a href="{{ .URL }}" rel="history"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a><br>
-						{{- end }}
-					</h1>
-				</div>
-			</bodycopy>
-		</div>
-		<div class="page_background"></div>
-	</div>
-</div>
+<header class="site-header">
+  <div class="section-header-name">
+    <h1><a href="/" rel="history">{{ site.Title }}</a></h1>
+  </div>
+  <nav class="section-header-nav">
+    <h1>
+      {{- range site.Menus.main }}
+      <a href="{{ .URL }}" rel="history"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a><br>
+      {{- end }}
+    </h1>
+  </nav>
+</header>

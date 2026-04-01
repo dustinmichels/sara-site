@@ -1,5 +1,18 @@
+/* ============================================================
+   BASE
+   ============================================================ */
+
+html {
+  /* Set 1rem = 8.64px (54% of 16px) to preserve all rem-based sizing */
+  font-size: 54%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+}
+
 body {
   background-color: rgb(226, 228, 225);
+  color: #000;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -15,23 +28,207 @@ a:active {
   opacity: 0.7;
 }
 
-/* Ensure images map properly to responsive constraints */
 img {
   max-width: 100%;
   height: auto;
+  border: 0;
+  padding: 0;
 }
 
-/* Remove default header/footer structural borders if any */
-header, footer {
-  border: none;
+i, em { font-style: italic; }
+b, strong { font-weight: bolder; }
+
+sub, sup { position: relative; vertical-align: baseline; }
+sub { top: 0.3em; }
+sup { top: -0.4em; }
+
+s { text-decoration: line-through; }
+
+ul, ol { margin: 0; padding: 0 0 0 2.5em; }
+blockquote { margin: 0; padding: 0 0 0 1em; }
+
+hr {
+  background: rgba(0, 0, 0, 0.25);
+  border: 0;
+  height: 1px;
+  display: block;
 }
 
-/* Add custom tight line height for paragraphs to mimic the source style */
-p, .bodycopy {
+p {
   line-height: 1.1;
 }
 
-/* Image Modal Styles */
+:focus { outline: 0; }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+.page-content {
+  font-size: 2.0rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "Diatype", sans-serif;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.page-content a {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+}
+
+.page-content img {
+  float: none;
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+
+h1 {
+  font-family: "Neue Haas Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.85);
+  letter-spacing: -0.1rem;
+}
+
+h1 a {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+h2 {
+  font-family: "Diatype", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 2.7rem;
+  line-height: 1.1;
+  font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+h2 a {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+small {
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  font-family: "Monument Grotesk Mono Variable", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+  font-variation-settings: 'slnt' 0, 'MONO' 1;
+}
+
+small a {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* ============================================================
+   HEADER LAYOUT
+   ============================================================ */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.site-header a {
+  pointer-events: auto;
+}
+
+.section-header-name {
+  padding: 0;
+}
+
+.section-header-nav {
+  padding: 1.5rem;
+  text-align: right;
+}
+
+.section-header-nav h1 {
+  font-size: 3rem;
+}
+
+.section-header-nav h2 {
+  font-size: 3.3rem;
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
+.section-main-content {
+  min-height: 100vh;
+}
+
+.section-main-content .page-content {
+  padding-top: 5.4rem;
+  padding-bottom: 5.4rem;
+  padding-left: 5.4rem;
+  padding-right: 5.4rem;
+}
+
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+
+body.is-home .section-main-content .page-content {
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.is-home .home-hero {
+  width: 100vw;
+  height: calc(100vh - 5.4rem);
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body.is-home .home-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+}
+
+/* ============================================================
+   GALLERY CAPTION
+   ============================================================ */
+
+.gallery_image_caption {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Diatype", sans-serif;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+/* ============================================================
+   IMAGE MODAL
+   ============================================================ */
+
 .modal-overlay {
   display: none;
   position: fixed;
@@ -96,34 +293,23 @@ p, .bodycopy {
 .modal-prev { left: 0; }
 .modal-next { right: 0; }
 
-/* Home Page Full Screen Image */
-body.is-home .section-main-content .content_padding {
-  padding-bottom: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  /* Keep the top padding (5.4rem) so it starts below the header */
-}
+/* ============================================================
+   IMAGE GALLERY (Macy.js masonry)
+   ============================================================ */
 
-body.is-home .home-hero {
-  width: 100vw;
-  /* Account for the ~34px inline top-padding on the page container + 5.4rem padding */
-  height: calc(100vh - 5.4rem - 34px);
-  overflow: hidden;
-  /* Break out of constraints horizontally to fill viewport */
+div.image-gallery {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-body.is-home .home-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+div.image-gallery img {
   display: block;
-  object-position: center;
+  width: 100%;
 }
 
-/* Phone reveal button */
+/* ============================================================
+   REVEAL BUTTON (email/phone)
+   ============================================================ */
+
 .reveal-btn {
   background: none;
   border: none;
@@ -138,34 +324,31 @@ body.is-home .home-hero img {
   color: rgba(0, 0, 0, 0.65);
 }
 
-/* Two-column layout for the info/about page */
+/* ============================================================
+   INFO / ABOUT PAGE — two-column layout
+   ============================================================ */
+
 .info-columns {
   display: flex;
   gap: 4rem;
   align-items: flex-start;
 }
 
-.info-bio {
-  flex: 2;
+.info-bio { flex: 2; }
+.info-contact { flex: 1; }
+
+/* ============================================================
+   CV PAGE
+   ============================================================ */
+
+body.page-cv .page-content {
+  font-size: 1.5rem;
 }
 
-.info-contact {
-  flex: 1;
-}
+/* ============================================================
+   MARQUEE HEADERS
+   ============================================================ */
 
-@media (max-width: 600px) {
-  .info-columns {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-/* Make font slightly smaller on the CV page */
-body.page-cv .page_content {
-  font-size: 0.85em;
-}
-
-/* Marquee section headers (CV page) */
 .marquee-header {
   overflow: hidden;
   margin: 1.5rem 0 0.5rem;
@@ -188,39 +371,43 @@ body.page-cv .page_content {
   100% { transform: translateX(-50%); }
 }
 
-/* Header - name/title pinned section */
-.section-header-name body { background-color: initial /*!variable_defaults*/; }
-.section-header-name .page { min-height: auto /*!page_height_default*/; }
-.section-header-name .page_background { background-color: initial /*!page_container_bgcolor*/; }
-.section-header-name .content_padding { padding: 0rem /*!main_margin*/; }
-.section-header-name .container { margin-left: 0 /*!content_left*/; }
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 
-/* Header - nav links pinned section */
-.section-header-nav .page { min-height: 100vh /*!page_height_100vh*/; }
-.section-header-nav .page_background { background-color: initial /*!page_container_bgcolor*/; }
-.section-header-nav .content_padding { padding: 1.5rem /*!main_margin*/; }
-.section-header-nav h1 { font-size: 3rem; }
-.section-header-nav h2 { font-size: 3.3rem; }
-.section-header-nav .container { text-align: right /*!text_right*/; }
-
-/* Mobile header layout */
 @media (max-width: 768px) {
-  .section-header-name .content_padding { padding: 0.75rem !important; }
-  .section-header-name h1 { font-size: 1.3rem; }
+  .section-header-name {
+    padding: 0.75rem;
+  }
 
-  .section-header-nav .content_padding { padding: 0.75rem !important; }
-  .section-header-nav h1 { font-size: 1.3rem; }
-  .section-header-nav h1 br { display: none; }
-  .section-header-nav h1 a { margin-left: 0.75rem; }
-  .section-header-nav h1 a:first-child { margin-left: 0; }
+  .section-header-name h1 {
+    font-size: 1.7rem;
+  }
+
+  .section-header-nav {
+    padding: 0.75rem;
+  }
+
+  .section-header-nav h1 {
+    font-size: 1.7rem;
+  }
+
+  .section-header-nav h1 br {
+    display: none;
+  }
+
+  .section-header-nav h1 a {
+    margin-left: 0.75rem;
+  }
+
+  .section-header-nav h1 a:first-child {
+    margin-left: 0;
+  }
 }
 
-/* Main content page section */
-.section-main-content .backdrop { width: 100% /*!background_cover*/; }
-.section-main-content .page { min-height: auto /*!page_height_default*/; }
-.section-main-content .content_padding {
-  padding-top: 5.4rem /*!main_margin*/;
-  padding-bottom: 5.4rem /*!main_margin*/;
-  padding-left: 5.4rem /*!main_margin*/;
-  padding-right: 5.4rem /*!main_margin*/;
+@media (max-width: 600px) {
+  .info-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
