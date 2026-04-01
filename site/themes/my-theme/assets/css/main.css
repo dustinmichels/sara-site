@@ -1,22 +1,32 @@
 body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
-}
-
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
-}
-
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+  background-color: rgb(226, 228, 225);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 a {
-  color: #00e;
+  color: inherit;
   text-decoration: none;
+}
+
+a:hover,
+a:active {
+  opacity: 0.7;
+}
+
+/* Ensure images map properly to responsive constraints */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default header/footer structural borders if any */
+header, footer {
+  border: none;
+}
+
+/* Add custom tight line height for paragraphs to mimic the source style */
+p, .bodycopy {
+  line-height: 1.1;
 }
