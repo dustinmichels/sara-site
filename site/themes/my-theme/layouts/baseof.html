@@ -3,7 +3,7 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body data-bodyview="">
+<body data-bodyview="" class="{{ if .IsHome }}is-home{{ else }}page-{{ .Title | urlize }}{{ end }}">
   <div class="main_container">
     {{ partial "header.html" . }}
 

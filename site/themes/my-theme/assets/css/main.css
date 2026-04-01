@@ -30,3 +30,75 @@ header, footer {
 p, .bodycopy {
   line-height: 1.1;
 }
+
+/* Image Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(226, 228, 225, 0.95);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal-overlay.active {
+  display: flex !important;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  cursor: default;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+}
+
+/* Home Page Full Screen Image */
+body.is-home .content_padding {
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  /* Keep the top padding (5.4rem) so it starts below the header */
+}
+
+body.is-home .home-hero {
+  width: 100vw;
+  /* Account for the ~34px inline top-padding on the page container + 5.4rem padding */
+  height: calc(100vh - 5.4rem - 34px);
+  overflow: hidden;
+  /* Break out of constraints horizontally to fill viewport */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body.is-home .home-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+}
+
+/* Make font slightly larger on the CV page */
+body.page-cv .page_content {
+  font-size: 1.15em;
+}
