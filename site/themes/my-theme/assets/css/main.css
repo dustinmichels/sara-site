@@ -357,8 +357,8 @@ div.image-gallery img {
   align-items: flex-start;
 }
 
-.info-bio { flex: 2; }
-.info-contact { flex: 1; }
+.info-bio { flex: 3; }
+.info-contact { flex: 2; }
 
 /* ============================================================
    CV PAGE

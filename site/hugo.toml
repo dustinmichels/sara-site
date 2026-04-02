@@ -5,7 +5,7 @@ theme = "my-theme"
 canonifyURLs = true
 
 [params]
-macyJsCDN = "https://cdn.jsdelivr.net/npm/macy@2"
+macyJsCDN = "https://cdn.jsdelivr.net/npm/macy@2" # image gallery library
 
 [markup.goldmark.renderer]
 unsafe = true
